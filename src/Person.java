@@ -13,10 +13,7 @@ public abstract class Person {
     }
 
 
-    public boolean isRetired() {
-        if (getAge() >= 60);
-        return true;
-    }
+    public abstract boolean isRetired();
 
     public abstract String registerPartnership();
 
