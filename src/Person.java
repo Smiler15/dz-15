@@ -3,24 +3,22 @@ public abstract class Person {
     private String firstName;
     private String lastName;
     private int age;
-    private String partner;
+    private Person partner;
 
-    public Person(String firstName, String lastName, int age, String partner) {
+    String maidenName;
+
+    public Person(String firstName, String lastName, int age) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
-        this.partner = partner;
+        this.partner = null;
     }
-
 
     public abstract boolean isRetired();
 
-    public abstract String registerPartnership();
+    public abstract void registerPartnership(Person partner);
 
-    public String deregisterPartnership() {
-        return getLastName();
-    }
-
+    public abstract void deregisterPartnership(boolean returnToMaidenName);
 
     public String getFirstName() {
         return firstName;
@@ -31,19 +29,19 @@ public abstract class Person {
     public int getAge() {
         return age;
     }
-    public String getPartner() {
+    public Person getPartner() {
         return partner;
     }
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
-    public void setLastname(String lastName) {
+    public void setLastName(String lastName) {
         this.lastName = lastName;
     }
     public void setAge(int age) {
         this.age = age;
     }
-    public void setPartner(String partner) {
+    public void setPartner(Person partner) {
         this.partner = partner;
     }
 }
